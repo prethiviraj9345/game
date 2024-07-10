@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Image Swap</title>
+    <style>
+        body {
+            background-image: url('earth-nebula-galaxy-milky-way-stars-purple-background-2560x1440-2469.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const imageSources = ['360_F_571060987_bFAR5Yt0SVXNYdsfoXbnnGnObSYz30UX.jpg','earth-nebula-galaxy-milky-way-stars-purple-background-2560x1440-2469.jpg','pexels-photo-1097456.webp',
+        'images (1).jpg','images (3).jpg','images.jpg',
+        'plymouth-muscle-aesthetic-4k-car-blending-vintage-vibes-with-modern-aesthetics-t3l45efx9wz83zu4.webp','satoru-gojo-jujutsu-3840x2160-9292.jpg'
+            
+        ];
+
+        function changeBackgroundImage() {
+            const randomIndex = Math.floor(Math.random() * imageSources.length);
+            document.body.style.backgroundImage = `url(${imageSources[randomIndex]})`;
+        }
+
+        // Change the background image every 5 seconds (500 milliseconds)
+        setInterval(changeBackgroundImage, 500);
+    </script>
+</body>
+</html>
